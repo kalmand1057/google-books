@@ -11,7 +11,7 @@ function Searchbar() {
       <Form>
         <Row>
             <Col>
-                <Form.Control type="text" placeholder="Enter keyword here" />
+                <Form.Control type="text" placeholder="Search here" />
             </Col>
             <Col>
                 <Button variant="dark" type="submit">Submit</Button>
