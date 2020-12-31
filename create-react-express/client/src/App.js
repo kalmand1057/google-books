@@ -2,19 +2,24 @@ import React, { Component } from "react";
 import logo from "./logo.svg";
 import "./App.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Hero from "./components/Hero";
-import Searchbar from "./components/Searchbar";
+import { BrowserRouter as Router, Route, Switch} from "react-router-dom";
 import Navbar from "./components/Navbar";
+import Search from "./pages/Search";
+import Saved from "./pages/Saved";
 
-function App() {
-  return (
-    <div className="App">
-      <Navbar />
-      <Hero />
-      <Searchbar />
-    </div>
-  );
-}
+class App extends Component {
+  render () {
+    return (
+      <Router>
+        <Navbar />
+          <Switch>
+            <Route exact path="/" component={Search}/>
+            <Route exact path="/saved" component={Saved}/>
+          </Switch>
+      </Router>
+    )
+  }
+};
 
 
 export default App;

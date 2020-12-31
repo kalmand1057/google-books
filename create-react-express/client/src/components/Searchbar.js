@@ -5,6 +5,20 @@ const styles = {
     
 }
 
+// export function Input(props) {
+//   return (
+//     <Form>
+//       <input {...props}/>
+//     </Form>
+//   )
+// };
+
+// export function SubmitBtn(props) {
+// return (
+//   <Button variant="dark" type="submit"{...props}>Search</Button>
+// )
+// };
+
 function Searchbar() {
     return (
     <Container>
