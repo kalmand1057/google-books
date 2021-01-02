@@ -15,17 +15,17 @@ function Card(props) {
     <div className="container">
         <div className="card" style={styles.card}>
             <div className="card-body">
-                <div class="row">
-                    <div class="col">
+                <div className="row">
+                    <div className="col">
                         <img alt={props.title} src={props.image} style={styles.img}/>
                     </div>
-                    <div class="col">
+                    <div className="col">
                         {props.authors}
                     </div>
-                    <div class="col">
+                    <div className="col">
                         {props.description}
                     </div>
-                    <div class="col">
+                    <div className="col">
                         {props.link}
                     </div>
                 </div>
