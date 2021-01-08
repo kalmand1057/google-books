@@ -3,6 +3,7 @@ import ResultListItem from "./ResultListItem";
 
 class ResultList extends Component {
     render() {
+        console.log("ResultList!", this.props.bookState)
         return (
             this.props.bookState.map((book) => (
                 <ResultListItem
