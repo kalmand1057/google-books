@@ -6,7 +6,7 @@ function Saved() {
     return (
         <div>
           <Hero />
-          <Card />
+          <Card/>
         </div>
     );
   }

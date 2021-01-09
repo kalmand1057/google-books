@@ -1,15 +1,12 @@
 import React from "react";
-import { Form, Row, Col, Button, Container } from 'react-bootstrap';
+import { Button } from 'react-bootstrap';
 
-const styles = {
-    
-}
 
 export function Input(props) {
   return (
-    <Form>
-      <input {...props}/>
-    </Form>
+    <div className="input-group input-group-lg">
+      <input className="form-control" type="text" {...props} />
+    </div>
   )
 };
 
@@ -18,23 +15,3 @@ return (
   <Button variant="dark" type="submit"{...props}>Search</Button>
 )
 };
-
-// function Searchbar() {
-//     return (
-//     <Container>
-//       <Form>
-//         <Row>
-//             <Col>
-//                 <Form.Control type="text" placeholder="Search here" />
-//             </Col>
-//             <Col>
-//                 <Button variant="dark" type="submit">Submit</Button>
-//             </Col>
-//         </Row>
-//       </Form>  
-//     </Container>
-//     );
-//   }
-
-
-// export default Searchbar;
