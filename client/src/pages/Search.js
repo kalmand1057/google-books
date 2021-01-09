@@ -37,13 +37,15 @@ class Search extends Component {
     this.searchBooks();
   };
 
-  saveGoogleBook = currentBook => {
+  //save books
+  saveBook = currentBook => {
+    console.log("got the current book!!", currentBook)
     API.saveBook({
       id: currentBook.id,
       title: currentBook.title,
-      authors: currentBook.authors,
-      description: currentBook.description,
-      image: currentBook.image,
+      authors: currentBook.authors.authors,
+      description: currentBook.authors.description,
+      image: currentBook.authors.image,
       link: currentBook.link
     })
     .then(res => console.log("posted to database!", res))
@@ -67,7 +69,7 @@ class Search extends Component {
         {this.state.books.length ? (
           <ResultList
           bookState={this.state.books}
-          saveGoogleBook={this.saveGoogleBook}
+          saveBook={this.saveBook}
           >
           </ResultList>
         ) : (

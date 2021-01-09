@@ -46,7 +46,7 @@ class ResultListItem extends Component {
     }
 
     onClickFunc = () => {
-        this.props.saveGoogleBook(this.props);
+        this.props.saveBook(this.props);
         this.getStyle();
     }
 
@@ -64,10 +64,12 @@ class ResultListItem extends Component {
                     <Col>
                         {this.props.description}
                     </Col>
-                    <Card.Link href={this.props.link} >
-                        Link Here
-                    </Card.Link>
-                    <Button onClick={this.onClickFunc}>{this.state.text}</Button>
+                    <Col>
+                        <Card.Link href={this.props.link} >
+                            Link Here
+                        </Card.Link>
+                        <Button onClick={this.onClickFunc}>{this.state.text}</Button>
+                    </Col>
                 </Row>
             </Card.Body>
         </Card>
